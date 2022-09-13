@@ -1,0 +1,188 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Consolas;}}
+{\colortbl ;\red0\green0\blue255;\red163\green21\blue21;\red43\green145\blue175;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang9\f0\fs22 Form1 :\par
+\f1\fs19  \cf1 string\cf0  lop = \cf2 "g"\cf0 ;\par
+        \cf1 public\cf0  Form1()\par
+        \{\par
+            InitializeComponent();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  Form1_Load(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button1_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf1 if\cf0  (textBox1.Text == lop )\par
+            \{\par
+                \cf3 Form2\cf0  secform = \cf1 new\cf0  \cf3 Form2\cf0 ();\par
+                secform.Show();\par
+                \cf1 this\cf0 .Hide();\par
+            \}\par
+            \cf1 else\cf0\par
+            \{\par
+                \cf3 MessageBox\cf0 .Show(\cf2 "Password not valid"\cf0 );\par
+            \}\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button2_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf1 this\cf0 .Close();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  label3_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+        \}\par
+\par
+\f0\fs22\par
+Form2 :\par
+\f1\fs19  \cf1 private\cf0  \cf1 void\cf0  button1_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf3 Form1\cf0  secform = \cf1 new\cf0  \cf3 Form1\cf0 ();\par
+            secform.Show();\par
+            \cf1 this\cf0 .Hide();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  Form2_Load(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button6_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf3 Form3\cf0  secform = \cf1 new\cf0  \cf3 Form3\cf0 ();\par
+            secform.Show();\par
+            \cf1 this\cf0 .Hide();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button7_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf3 Form5\cf0  nwsec = \cf1 new\cf0  \cf3 Form5\cf0 ();\par
+            nwsec.Show();\par
+            \cf1 this\cf0 .Hide();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button5_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf3 Form6\cf0  jh = \cf1 new\cf0  \cf3 Form6\cf0 ();\par
+            jh.Show();\par
+            \cf1 this\cf0 .Hide();\par
+        \}\par
+\f0\fs22\par
+Form3 :\par
+\f1\fs19  \cf3 Form2\cf0  newsec = \cf1 new\cf0  \cf3 Form2\cf0 ();\par
+            newsec.Show();\par
+            \cf1 this\cf0 .Hide();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button1_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            con.Open();\par
+            \cf3 OleDbCommand\cf0  cmd = \cf1 new\cf0  \cf3 OleDbCommand\cf0 (\cf2 @"INSERT INTO  cie ([Customer ID], [Customer Names], [Salary], [Business Profit], [Share of AOP] ,[Capital Gains],[Other Sources],[Foriegn allowances], [Zakat],[Workers Welfare Fund],[Workers Profit Participation], [Charitable Donation admissible], [Total income after deductions],[Total Tax payable]) VALUES ('"\cf0  + textBox1.Text + \cf2 "','"\cf0  + textBox2.Text + \cf2 "','"\cf0  + textBox3.Text + \cf2 "','"\cf0  + textBox4.Text + \cf2 "','"\cf0  + textBox5.Text + \cf2 "','"\cf0  + textBox6.Text + \cf2 "','"\cf0  + textBox7.Text + \cf2 "','"\cf0  + textBox8.Text + \cf2 "','"\cf0  + textBox9.Text + \cf2 "','"\cf0  + textBox10.Text + \cf2 "','"\cf0  + textBox11.Text + \cf2 "','"\cf0  + textBox12.Text + \cf2 "','"\cf0  + textBox13.Text + \cf2 "','"\cf0  + textBox14.Text + \cf2 "');"\cf0 , con);\par
+            cmd.ExecuteNonQuery();\par
+            \cf3 MessageBox\cf0 .Show(\cf2 "Record Successfully Saved"\cf0 );\par
+            con.Close();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button2_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            textBox13.Text = ((\cf3 Convert\cf0 .ToInt32(textBox3.Text)) + (\cf3 Convert\cf0 .ToInt32(textBox4.Text)) + (\cf3 Convert\cf0 .ToInt32(textBox5.Text)) + (\cf3 Convert\cf0 .ToInt32(textBox6.Text)) + (\cf3 Convert\cf0 .ToInt32(textBox7.Text)) + (\cf3 Convert\cf0 .ToInt32(textBox8.Text)) - (\cf3 Convert\cf0 .ToInt32(textBox9.Text)) - (\cf3 Convert\cf0 .ToInt32(textBox10.Text)) - (\cf3 Convert\cf0 .ToInt32(textBox11.Text)) - (\cf3 Convert\cf0 .ToInt32(textBox12.Text))).ToString();\par
+\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button4_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) <= 400000))\par
+              \{\par
+                \cf3 MessageBox\cf0 .Show(\cf2 "No Taxation"\cf0 );\par
+              \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 400000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 500000))\par
+              \{\par
+                textBox14.Text = ((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) * 0.05).ToString();\par
+              \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 500000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 800000))\par
+              \{\par
+                textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 500000) * 0.75) + 5000).ToString();\par
+              \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 800000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 1300000))\par
+             \{\par
+                textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 800000) * 0.1) + 27500).ToString();\par
+              \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 1300000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 1800000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 1300000) * 0.125) + 77500).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 1800000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 2200000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) * 0.15) - 1800000) + 140000).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 2200000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 2600000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 2200000) * 0.175) + 200000).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 2600000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 3000000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) * 0.2) - 2600000) + 270000).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 3000000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 3500000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 3000000) * 0.225) + 350000).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 3500000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 4000000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 3500000) * 0.25) + 462500).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 4000000) && ((\cf1 int\cf0 .Parse(textBox13.Text)) <= 7000000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 4000000) * 0.275) + 587500).ToString();\par
+             \}\par
+             \cf1 if\cf0  (((\cf1 int\cf0 .Parse(textBox13.Text)) > 7000000))\par
+             \{\par
+                 textBox14.Text = ((((\cf3 Convert\cf0 .ToInt32(textBox13.Text)) - 7000000) * 0.3) + 1412500).ToString();\par
+             \}\par
+\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button5_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            textBox1.Text = \cf2 ""\cf0 ;\par
+            textBox2.Text = \cf2 ""\cf0 ;\par
+            textBox3.Text = \cf2 ""\cf0 ;\par
+            textBox4.Text = \cf2 ""\cf0 ;\par
+            textBox5.Text = \cf2 ""\cf0 ;\par
+            textBox6.Text = \cf2 ""\cf0 ;\par
+            textBox7.Text = \cf2 ""\cf0 ;\par
+            textBox8.Text = \cf2 ""\cf0 ;\par
+            textBox9.Text = \cf2 ""\cf0 ;\par
+            textBox10.Text = \cf2 ""\cf0 ;\par
+            textBox11.Text = \cf2 ""\cf0 ;\par
+            textBox12.Text = \cf2 ""\cf0 ;\par
+            textBox13.Text = \cf2 ""\cf0 ;\par
+            textBox14.Text = \cf2 ""\cf0 ;\par
+\f0\fs22 Form5:\par
+\f1\fs19  \cf3 OleDbConnection\cf0  con = \cf1 new\cf0  \cf3 OleDbConnection\cf0 (\cf2 @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Saad Aleem\\Documents\\CIE project.accdb"\cf0 );\par
+        \cf1 public\cf0  Form5()\par
+        \{\par
+            InitializeComponent();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button1_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+            \cf3 Form2\cf0  k = \cf1 new\cf0  \cf3 Form2\cf0 ();\par
+            k.Show();\par
+            \cf1 this\cf0 .Hide();\par
+        \}\par
+\par
+        \cf1 private\cf0  \cf1 void\cf0  button2_Click(\cf1 object\cf0  sender, \cf3 EventArgs\cf0  e)\par
+        \{\par
+           \cf1 string\cf0  sql = \cf2 " DELETE FROM cie WHERE [Customer ID] ="\cf0  +  textBox1.Text;\par
+           con.Open();\par
+           \cf3 OleDbCommand\cf0  cmd = \cf1 new\cf0  \cf3 OleDbCommand\cf0 (sql, con);\par
+           cmd.ExecuteNonQuery();\par
+           \cf3 MessageBox\cf0 .Show(\cf2 "Record Successfully deleted"\cf0 );\par
+           con.Close();\par
+        \par
+\f0\fs22\par
+}
+ 
